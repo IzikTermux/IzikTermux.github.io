@@ -61,7 +61,7 @@ body::after {
 
 .container {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem;
@@ -144,7 +144,7 @@ header {
     padding: 2rem;
     margin-bottom: 2rem;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 0.5s ease forwards;
@@ -578,24 +578,19 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     pointer-events: none;
-    z-index: -1; /* Помещаем за контент */
+    z-index: 2;
 }
 
 .light {
     position: absolute;
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
     background: #FF8C00;
     border-radius: 50%;
-    filter: blur(3px);
-    box-shadow: 
-        0 0 10px #FF8C00,
-        0 0 20px #FF8C00,
-        0 0 30px #FF8C00,
-        0 0 40px #FF4500;
-    animation: neonFall 4s linear infinite;
+    box-shadow: 0 0 10px #FF8C00, 0 0 20px #FF8C00, 0 0 30px #FF8C00;
+    animation: neonFall 3s linear forwards;
+    opacity: 0;
 }
 
 @keyframes neonFall {
@@ -648,7 +643,7 @@ h3 {
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 1; /* Повышаем z-index */
+    z-index: 1;
 }
 
 .background-fixed img {
@@ -672,7 +667,7 @@ h3 {
         rgba(26, 26, 26, 0.8) 50%,
         rgba(26, 26, 26, 0.95) 100%
     );
-    z-index: 2; /* Повышаем z-index */
+    z-index: 2;
 }
 
 /* Контейнер для фона */
